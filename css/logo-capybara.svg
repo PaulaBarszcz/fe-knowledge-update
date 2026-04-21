@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Capybara">
+  <!-- Ears (outer) -->
+  <ellipse cx="10" cy="7.5" rx="2.3" ry="2.7" fill="#fff"/>
+  <ellipse cx="22" cy="7.5" rx="2.3" ry="2.7" fill="#fff"/>
+  <!-- Ear inner shadow -->
+  <ellipse cx="10" cy="8" rx="1" ry="1.4" fill="#000" opacity=".28"/>
+  <ellipse cx="22" cy="8" rx="1" ry="1.4" fill="#000" opacity=".28"/>
+  <!-- Head + body (single blunt blob, capybara has no neck) -->
+  <path d="M4 16 C4 10 9 6 16 6 C23 6 28 10 28 16 L28 23 C28 26 24 28 20 28 L12 28 C8 28 4 26 4 23 Z" fill="#fff"/>
+  <!-- Cheek / snout shading -->
+  <ellipse cx="16" cy="22" rx="6" ry="3.2" fill="#000" opacity=".10"/>
+  <!-- Eyes -->
+  <circle cx="11.5" cy="14.5" r="1.35" fill="#222"/>
+  <circle cx="20.5" cy="14.5" r="1.35" fill="#222"/>
+  <!-- Eye highlights -->
+  <circle cx="12" cy="14" r=".42" fill="#fff"/>
+  <circle cx="21" cy="14" r=".42" fill="#fff"/>
+  <!-- Nostrils -->
+  <ellipse cx="14.2" cy="21.6" rx=".55" ry=".8" fill="#333"/>
+  <ellipse cx="17.8" cy="21.6" rx=".55" ry=".8" fill="#333"/>
+  <!-- Mouth (slight smile) -->
+  <path d="M14.2 24 Q16 25.3 17.8 24" fill="none" stroke="#333" stroke-width=".9" stroke-linecap="round"/>
+</svg>
