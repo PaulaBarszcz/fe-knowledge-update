@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz — Angular Interview Prep</title>
+  <meta name="description" content="Quiz przygotowujący do rozmowy kwalifikacyjnej na stanowisko Senior Frontend (Angular 21).">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="Angular Interview Prep">
+        <div class="logo-icon" aria-hidden="true">PZ</div>
+        <span>Angular Interview Prep</span>
+      </a>
+      <nav class="nav" aria-label="Główna nawigacja">
+        <a href="index.html" class="nav-link" data-i18n="nav.home">Start</a>
+        <a href="definitions.html" class="nav-link" data-i18n="nav.definitions">Definicje</a>
+        <a href="quiz.html" class="nav-link active" data-i18n="nav.quiz" aria-current="page">Quiz</a>
+        <a href="mock.html" class="nav-link" data-i18n="nav.mock">Mock interview</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-toggle" role="group" aria-label="Język / Language">
+          <button class="lang-btn active" data-lang="pl" type="button">PL</button>
+          <button class="lang-btn" data-lang="en" type="button">EN</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- ── EKRAN STARTOWY ─────────────────────────────────── -->
+    <section id="start-screen" class="quiz-start" aria-labelledby="start-title">
+      <h1 id="start-title" data-i18n="quiz.title">Quiz Angular Senior</h1>
+      <p class="hero-subtitle" data-i18n="quiz.subtitle">Wybierz liczbę pytań i sprawdź swoją wiedzę.</p>
+
+      <div class="count-options" role="group" aria-label="Liczba pytań">
+        <button class="count-btn" data-count="10" type="button">
+          <span class="count-num">10</span>
+          <span class="count-label" data-i18n="quiz.questions">pytań</span>
+        </button>
+        <button class="count-btn selected" data-count="20" type="button">
+          <span class="count-num">20</span>
+          <span class="count-label" data-i18n="quiz.questions">pytań</span>
+        </button>
+        <button class="count-btn" data-count="all" type="button">
+          <span class="count-num" data-total-count>40</span>
+          <span class="count-label" data-i18n="quiz.all">wszystkie</span>
+        </button>
+      </div>
+
+      <button class="btn btn-primary" id="start-quiz-btn" type="button" data-i18n="quiz.start">
+        Rozpocznij quiz
+      </button>
+    </section>
+
+    <!-- ── EKRAN QUIZU ────────────────────────────────────── -->
+    <section id="quiz-screen" class="hidden" aria-live="polite">
+      <div class="quiz-status">
+        <span><span id="current-q">1</span> / <span id="total-q">20</span></span>
+        <span><span data-i18n="quiz.score">Wynik</span>: <span id="live-score">0</span></span>
+      </div>
+      <div class="quiz-progress-bar" aria-hidden="true">
+        <div class="quiz-progress-fill" id="progress-fill" style="width: 0%"></div>
+      </div>
+
+      <div id="question-container"></div>
+    </section>
+
+    <!-- ── EKRAN WYNIKÓW ──────────────────────────────────── -->
+    <section id="results-screen" class="hidden" aria-labelledby="result-title">
+      <div class="results-card">
+        <div class="score-circle" id="score-circle" aria-live="polite">
+          <span class="score-pct" id="score-pct">0%</span>
+          <span class="score-label" data-i18n="quiz.scoreLabel">Wynik</span>
+        </div>
+
+        <h2 id="result-title">0 / 0</h2>
+        <p id="result-message">&nbsp;</p>
+
+        <div class="results-details">
+          <div class="result-stat">
+            <span class="result-stat-num" id="correct-count" style="color: var(--success);">0</span>
+            <span class="result-stat-label" data-i18n="quiz.correct">poprawnych</span>
+          </div>
+          <div class="result-stat">
+            <span class="result-stat-num" id="wrong-count" style="color: var(--error);">0</span>
+            <span class="result-stat-label" data-i18n="quiz.wrong">błędnych</span>
+          </div>
+          <div class="result-stat">
+            <span class="result-stat-num" id="total-count">0</span>
+            <span class="result-stat-label" data-i18n="quiz.total">wszystkich</span>
+          </div>
+        </div>
+
+        <div class="results-actions">
+          <button class="btn btn-primary" id="restart-btn" type="button" data-i18n="quiz.restart">Jeszcze raz</button>
+          <button class="btn btn-secondary" id="review-btn" type="button" data-i18n="quiz.review">Przejrzyj błędy</button>
+        </div>
+
+        <div id="wrong-topics-list" class="wrong-topics"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/quiz-data.js"></script>
+  <script src="js/quiz.js"></script>
+</body>
+</html>

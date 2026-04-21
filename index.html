@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Angular Interview Prep</title>
+  <meta name="description" content="Zestaw narzędzi przygotowujących do rozmowy kwalifikacyjnej na stanowisko Senior Frontend (Angular 21): definicje, quiz, mock interview.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="Angular Interview Prep">
+        <div class="logo-icon" aria-hidden="true">PZ</div>
+        <span>Angular Interview Prep</span>
+      </a>
+      <nav class="nav" aria-label="Główna nawigacja">
+        <a href="index.html" class="nav-link active" data-i18n="nav.home" aria-current="page">Start</a>
+        <a href="definitions.html" class="nav-link" data-i18n="nav.definitions">Definicje</a>
+        <a href="quiz.html" class="nav-link" data-i18n="nav.quiz">Quiz</a>
+        <a href="mock.html" class="nav-link" data-i18n="nav.mock">Mock interview</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-toggle" role="group" aria-label="Język / Language">
+          <button class="lang-btn active" data-lang="pl" type="button">PL</button>
+          <button class="lang-btn" data-lang="en" type="button">EN</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="hero">
+      <h1 data-i18n="home.title">Angular Interview Prep</h1>
+      <p class="hero-subtitle" data-i18n="home.subtitle">
+        Twój zestaw narzędzi do rozmowy Senior Frontend (Angular 21).
+      </p>
+    </section>
+
+    <div class="stats-row" aria-label="Statystyki">
+      <div class="stat-chip">
+        <strong>76</strong>
+        <span data-i18n="home.stats.flash">fiszek</span>
+      </div>
+      <div class="stat-chip">
+        <strong>50</strong>
+        <span data-i18n="home.stats.quiz">pytań quizu</span>
+      </div>
+      <div class="stat-chip">
+        <strong>13</strong>
+        <span data-i18n="home.stats.mock">pytań mock</span>
+      </div>
+      <div class="stat-chip">
+        <span data-i18n="home.updated">ostatnia aktualizacja</span>
+        <strong>2026-04-21</strong>
+      </div>
+    </div>
+
+    <div class="home-cards">
+      <a class="home-card" href="definitions.html" style="--card-color: var(--cat-angular);">
+        <div class="home-card-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+          </svg>
+        </div>
+        <h2 data-i18n="home.card.defs.title">Definicje</h2>
+        <p data-i18n="home.card.defs.desc">
+          Fiszki z kluczowymi pojęciami: Angular, RxJS, Camunda, KYC/AML, Copilot, AWS. Search, filtry, expand/collapse.
+        </p>
+        <span class="home-card-cta">
+          <span data-i18n="home.card.cta">Otwórz</span> →
+        </span>
+      </a>
+
+      <a class="home-card" href="quiz.html" style="--card-color: var(--cat-rxjs);">
+        <div class="home-card-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <circle cx="12" cy="12" r="6"></circle>
+            <circle cx="12" cy="12" r="2"></circle>
+          </svg>
+        </div>
+        <h2 data-i18n="home.card.quiz.title">Quiz</h2>
+        <p data-i18n="home.card.quiz.desc">
+          Pytania single / multi-choice w kilkunastu kategoriach. Wybierz długość (10 / 20 / wszystkie) i sprawdź się.
+        </p>
+        <span class="home-card-cta">
+          <span data-i18n="home.card.cta">Otwórz</span> →
+        </span>
+      </a>
+
+      <a class="home-card" href="mock.html" style="--card-color: var(--cat-domain);">
+        <div class="home-card-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="13" r="8"></circle>
+            <path d="M12 9v4l2 2"></path>
+            <path d="M9 2h6"></path>
+          </svg>
+        </div>
+        <h2 data-i18n="home.card.mock.title">Mock interview</h2>
+        <p data-i18n="home.card.mock.desc">
+          Pytania open-ended z timerem (3–5 min), wzorcowa odpowiedź, samoocena → lista tematów do powtórki.
+        </p>
+        <span class="home-card-cta">
+          <span data-i18n="home.card.cta">Otwórz</span> →
+        </span>
+      </a>
+    </div>
+  </main>
+
+  <script src="js/i18n.js"></script>
+  <script>
+    (function () {
+      'use strict';
+      if (!window.I18N) return;
+      I18N.init();
+      I18N.apply();
+      I18N.bindToggle();
+      I18N.onChange(() => I18N.apply());
+    })();
+  </script>
+</body>
+</html>

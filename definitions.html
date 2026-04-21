@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Definicje — Angular Interview Prep</title>
+  <meta name="description" content="Fiszki z definicjami do rozmowy kwalifikacyjnej na stanowisko Senior Frontend (Angular 21).">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="Angular Interview Prep">
+        <div class="logo-icon" aria-hidden="true">PZ</div>
+        <span>Angular Interview Prep</span>
+      </a>
+      <nav class="nav" aria-label="Główna nawigacja">
+        <a href="index.html" class="nav-link" data-i18n="nav.home">Start</a>
+        <a href="definitions.html" class="nav-link active" data-i18n="nav.definitions" aria-current="page">Definicje</a>
+        <a href="quiz.html" class="nav-link" data-i18n="nav.quiz">Quiz</a>
+        <a href="mock.html" class="nav-link" data-i18n="nav.mock">Mock interview</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-toggle" role="group" aria-label="Język / Language">
+          <button class="lang-btn active" data-lang="pl" type="button">PL</button>
+          <button class="lang-btn" data-lang="en" type="button">EN</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="hero">
+      <h1 data-i18n="defs.title">Definicje — Angular Senior</h1>
+      <p class="hero-subtitle" data-i18n="defs.subtitle">
+        Kluczowe pojęcia do rozmowy o pracę senior frontend (Angular 21).
+      </p>
+    </section>
+
+    <div class="stats-row" aria-label="Statystyki">
+      <div class="stat-chip">
+        <strong id="stat-total">0</strong>
+        <span data-i18n="defs.stats.total">definicji</span>
+      </div>
+      <div class="stat-chip">
+        <strong id="stat-cats">0</strong>
+        <span data-i18n="defs.stats.cats">kategorii</span>
+      </div>
+      <div class="stat-chip">
+        <span data-i18n="defs.stats.updated">ostatnia aktualizacja</span>
+        <strong>2026-04-21</strong>
+      </div>
+    </div>
+
+    <div class="search-bar">
+      <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="11" cy="11" r="7"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input type="search" id="search-input" autocomplete="off"
+             data-i18n-placeholder="defs.search"
+             placeholder="Szukaj w definicjach, bulletach, słowach kluczowych…"
+             aria-label="Search">
+    </div>
+
+    <div class="cat-filters" id="cat-filters" role="group" aria-label="Filtr kategorii"></div>
+
+    <div class="results-actions" style="justify-content: flex-start; margin-bottom: 1rem;">
+      <button class="btn btn-secondary" id="expand-all-btn" type="button" data-i18n="defs.expandAll">Rozwiń wszystkie</button>
+      <button class="btn btn-secondary" id="collapse-all-btn" type="button" data-i18n="defs.collapseAll">Zwiń wszystkie</button>
+    </div>
+
+    <div id="sections-container"></div>
+
+    <div class="empty-state hidden" id="empty-state">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="11" cy="11" r="7"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <p data-i18n="defs.empty">Brak wyników. Spróbuj innego zapytania lub kategorii.</p>
+    </div>
+  </main>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/definitions-data.js"></script>
+  <script src="js/definitions.js"></script>
+</body>
+</html>
